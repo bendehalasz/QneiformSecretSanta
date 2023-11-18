@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("container").addEventListener("keyup", function(event) {
         // Check if the key pressed is Enter (key code 13)
@@ -25,27 +28,56 @@ function checkCredentials() {
     var name = document.getElementById('name').value;
     var password = document.getElementById('password').value;
 
-    // Add your Secret Santa pairs logic here
-    var secretSantaPairs = {
-        "Alice": { "name": "Bob", "password": "randompassword1" },
-        "Bob": { "name": "Alice", "password": "abc" },
-        // Add more pairs as needed
-    };
+    var index = participants.findIndex(function(participant) {
+        return (participant.hasOwnProperty('Name') && participant.Name === name) || (participant.hasOwnProperty('Email') && participant.Email === name)
+    });
 
-    if (secretSantaPairs.hasOwnProperty(name) && password === secretSantaPairs[name].password) {
+    if (index !== -1)
+    {
+        console.log(index)
+        if (password === participants[index]['Password']) {
 
-        // Hide the login form
-        document.getElementById('container').style.display = 'none';
-        document.getElementById('drawn_person').classList.remove('hidden');
+            // Hide the login form
+            document.getElementById('container').style.display = 'none';
+            document.getElementById('drawn_person_name').innerHTML = shuffled_names[(index+2)%shuffled_names.length]
+            document.getElementById('drawn_person').classList.remove('hidden');
+    
+        }
+        else
+        {
+            document.getElementById('result').innerHTML = 'Incorrect Password';
+            document.getElementById('result').classList.remove('hidden');
+            document.getElementById('name').style.borderColor = "#b31919";
+            document.getElementById('password').style.borderColor = "#b31919";
+        }
 
-        // Display the participant's name
-        var resultElement = document.getElementById('result');
-        resultElement.innerHTML = 'Hello, ' + name + '!<br>You drew ' + secretSantaPairs[name].name + ' as your Secret Santa.';
-        resultElement.classList.remove('hidden');
-    } else {
-        document.getElementById('result').innerHTML = 'Incorrect Name or Password';
+    }
+    else {
+        document.getElementById('result').innerHTML = 'Incorrect Name';
         document.getElementById('result').classList.remove('hidden');
         document.getElementById('name').style.borderColor = "#b31919";
         document.getElementById('password').style.borderColor = "#b31919";
     }
+
+    
 }
+
+var participants =  [
+    {'Name': 'Xavier Cameron-Higgs', 'Email': 'xavier.cameron-higgs@qneiform.com', 'Password': 'nutcracker14'},
+    {'Name': 'Kamilla Biró', 'Email': 'kamilla.biro@qneiform.com', 'Password': 'snowflake12'},
+    {'Name': 'Eszter Lőrincz', 'Email': 'eszter.lorincz@qneiform.com', 'Password': 'snowflake48'},
+    {'Name': 'Betti Szmutku', 'Email': 'bernadett.szmutku@qneiform.com', 'Password': 'snowflake24'},
+    {'Name': 'Kristina Stavri', 'Email': 'kristina.stavri@qneiform.com', 'Password': 'star35'},
+    {'Name': 'Anna Pálmai', 'Email': 'anna.palmai@qneiform.com', 'Password': 'garland66'},
+    {'Name': 'Federica Piezzo', 'Email': 'federica.piezzo@qneiform.com', 'Password': 'fireplace72'},
+    {'Name': 'Gergely Füstös', 'Email': 'gergely.fustos@qneiform.com', 'Password': 'star53'},
+    {'Name': 'Anna Ferenczy', 'Email': 'anna.ferenczy@qneiform.com', 'Password': 'gingerbread61'},
+    {'Name': 'Nándor Tóth', 'Email': 'nandor.toth@qneiform.com', 'Password': 'candle61'},
+    {'Name': 'Nóra Kovács', 'Email': 'nora.kovacs@qneiform.com', 'Password': 'nutcracker40'},
+    {'Name': 'Thomas Percy', 'Email': 'thomas.percy@qneiform.com', 'Password': 'wreath84'},
+    {'Name': 'Bence Bíró', 'Email': 'bence.biro@qneiform.com', 'Password': 'wreath10'},
+    {'Name': 'Bende Halasz', 'Email': 'bende.halasz@qneiform.com', 'Password': 'present75'},
+  ]
+
+var shuffled_names =  ['Kristina Stavri', 'Anna Pálmai', 'Nóra Kovács', 'Federica Piezzo', 'Gergely Füstös', 'Bende Halasz', 'Nándor Tóth', 'Eszter Lőrincz', 'Thomas Percy', 'Xavier Cameron-Higgs', 'Betti Szmutku', 'Kamilla Biró', 'Bence Bíró', 'Anna Ferenczy']
+

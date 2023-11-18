@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="./pure-snow.js" defer></script>
+</head>
+<body>
+    <div id="snow" data-count="200"></div>
+
+    <div  class="container" id="container">
+        <img src="./media/logo_dark.5c08fb70.png">
+        <form id="loginForm">
+            <div id="result" class="hidden"></div>
+            <input aria-invalid="false" aria-describedby=":r1:" id="name" name="username" placeholder="Name" required="" type="text" class="MuiInputBase-input css-v5hc4g" value="">
+            <input aria-invalid="false" aria-describedby=":r3:" autocomplete="current-password" id="password" name="password" placeholder="Password" required="" type="password" class="MuiInputBase-input css-v5hc4g" value="">
+            <button type="button" onclick="checkCredentials()">LOGIN</button>
+        </form>
+        
+    </div>
+
+    <div class="hidden"  id="drawn_person">
+        <div class="box">
+            <div class="box-body">
+              <h3 class="h3">Halasz Bende</h3>
+              <div class="box-lid">
+                
+                <div class="box-bowtie"></div>
+                
+              </div>
+            </div>
+          </div>
+    </div>
+
+    
+</body>
+</html>

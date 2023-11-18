@@ -1,27 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const snowflakesContainer = document.querySelector(".snowflakes");
-
-    // Function to create a new snowflake
-    function createSnowflake() {
-        const snowflake = document.createElement("div");
-        snowflake.className = "snowflake";
-        snowflake.innerHTML = "❄"; // You can customize the snowflake symbol
-        snowflake.style.fontSize = Math.random() * 20 + "vw";
-        snowflake.style.left = Math.random() * window.innerWidth + "px";
-        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
-        snowflakesContainer.appendChild(snowflake);
-
-        // Remove the snowflake after animation completes
-        snowflake.addEventListener("animationend", function() {
-            snowflake.remove();
-        });
-    }
-
-    // Generate snowflakes at regular intervals
-    setInterval(createSnowflake, 100);
-});
-
-document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("container").addEventListener("keyup", function(event) {
         // Check if the key pressed is Enter (key code 13)
         if (event.key === "Enter") {

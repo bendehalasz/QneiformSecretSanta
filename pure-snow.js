@@ -1,6 +1,13 @@
 let snowflakesCount = 200; // Snowflake count, can be overwritten by attrs
 let baseCSS = ``;
 
+function isMobile() {
+  
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+showSnow(!isMobile())
+
 
 // set global attributes
 if (typeof SNOWFLAKES_COUNT !== 'undefined') {
@@ -29,9 +36,11 @@ function getSnowAttributes() {
 // This function allows you to turn on and off the snow
 function showSnow(value) {
   if (value) {
+    console.log("desktop")
     document.getElementById('snow').style.display = "block";
   }
   else {
+    console.log("mobile")
     document.getElementById('snow').style.display = "none";
   }
 }

@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    document.getElementById("drawn_person").addEventListener("click", function(event) {
+        // Check if the key pressed is Enter (key code 13)
+        document.getElementById("box-body").classList.add('box-body_hover')
+    });
+
     //document.getElementById("box").addEventListener("click", () => toggleAnimation())
 });
 

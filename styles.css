@@ -175,7 +175,7 @@ button:hover {
   .box-body_hover .h3{
     opacity: 1;
     z-index: 3;
-    transform: translateY(-287px);
+    transform: translateY(-210px);
   
   
      
@@ -380,3 +380,25 @@ button:hover {
               transform: translateX(-100%) rotate(0deg) skew(10deg, 10deg);
     }
   }
+
+.pulsing-text {
+  font-size: 24px;
+  color: #0a203a;
+  text-align: center;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+  text-shadow: 0 0 30px rgb(240, 235, 235)
+
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

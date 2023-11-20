@@ -1,5 +1,5 @@
 
-console.log("live version")
+console.log("corrected version")
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("container").addEventListener("keyup", function(event) {
@@ -32,12 +32,21 @@ function checkCredentials() {
 
     if (index !== -1)
     {
-        console.log(index)
-        if (password === passwords[(index-3)%passwords.length]) {
+        password_index = (index-3)%passwords.length
+        if(password_index < 0)
+        {
+            password_index = passwords.length + password_index
+        }
+        if (password === passwords[password_index]) {
 
             // Hide the login form
             document.getElementById('container').style.display = 'none';
-            document.getElementById('drawn_person_name').innerHTML = shuffled_names[(index+2)%shuffled_names.length]
+            profile_index = (index+2)%shuffled_names.length
+            if(profile_index < 0)
+            {
+                profile_index = shuffled_names.length + profile_index
+            }
+            document.getElementById('drawn_person_name').innerHTML = shuffled_names[profile_index]
             document.getElementById('drawn_person').classList.remove('hidden');
     
         }

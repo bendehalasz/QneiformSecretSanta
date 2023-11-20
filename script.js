@@ -62,6 +62,6 @@ function checkCredentials() {
 }
 
 var names = ['Xavier Cameron-Higgs', 'Kamilla Biró', 'Eszter Lőrincz', 'Betti Szmutku', 'Kristina Stavri', 'Anna Pálmai', 'Federica Piezzo', 'Gergely Füstös', 'Anna Ferenczy', 'Nándor Tóth', 'Nóra Kovács', 'Thomas Percy', 'Bence Bíró', 'Bende Halasz', ]
-var passwords = ['gingerbread92', 'ribbon17', 'garland77', 'nutcracker20', 'candle88', 'nutcracker16', 'candle44', 'garland68', 'star48', 'wreath41', 'star50', 'snowflake20', 'garland63', 'nutcracker91', ]
-var shuffled_names =  ['Eszter Lőrincz', 'Anna Pálmai', 'Nóra Kovács', 'Anna Ferenczy', 'Xavier Cameron-Higgs', 'Bence Bíró', 'Kamilla Biró', 'Kristina Stavri', 'Nándor Tóth', 'Bende Halasz', 'Gergely Füstös', 'Thomas Percy', 'Federica Piezzo', 'Betti Szmutku']
+var passwords = ['gingerbread85', 'candle64', 'star11', 'snowflake85', 'fireplace95', 'fireplace91', 'garland68', 'snowman16', 'candle43', 'nutcracker75', 'ribbon89', 'fireplace14', 'snowman85', 'nutcracker84', ]
+var shuffled_names =  ['Anna Ferenczy', 'Federica Piezzo', 'Nóra Kovács', 'Gergely Füstös', 'Nándor Tóth', 'Bence Bíró', 'Thomas Percy', 'Kamilla Biró', 'Xavier Cameron-Higgs', 'Kristina Stavri', 'Eszter Lőrincz', 'Bende Halasz', 'Betti Szmutku', 'Anna Pálmai']
 

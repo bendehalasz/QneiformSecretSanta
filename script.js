@@ -1,5 +1,5 @@
 
-
+console.log("live version")
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("container").addEventListener("keyup", function(event) {
@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function toggleAnimation() {
-    console.log("click")
     const boxBody = document.querySelector('.box-body');
     boxBody.classList.toggle('clicked');
 }
@@ -62,6 +61,6 @@ function checkCredentials() {
 }
 
 var names = ['Xavier Cameron-Higgs', 'Kamilla Biró', 'Eszter Lőrincz', 'Betti Szmutku', 'Kristina Stavri', 'Anna Pálmai', 'Federica Piezzo', 'Gergely Füstös', 'Anna Ferenczy', 'Nándor Tóth', 'Nóra Kovács', 'Thomas Percy', 'Bence Bíró', 'Bende Halasz', ]
-var passwords = ['gingerbread85', 'candle64', 'star11', 'snowflake85', 'fireplace95', 'fireplace91', 'garland68', 'snowman16', 'candle43', 'nutcracker75', 'ribbon89', 'fireplace14', 'snowman85', 'nutcracker84', ]
-var shuffled_names =  ['Anna Ferenczy', 'Federica Piezzo', 'Nóra Kovács', 'Gergely Füstös', 'Nándor Tóth', 'Bence Bíró', 'Thomas Percy', 'Kamilla Biró', 'Xavier Cameron-Higgs', 'Kristina Stavri', 'Eszter Lőrincz', 'Bende Halasz', 'Betti Szmutku', 'Anna Pálmai']
+var passwords = ['gingerbread58', 'ornament15', 'bell30', 'garland76', 'fireplace23', 'nutcracker48', 'nutcracker37', 'garland83', 'nutcracker50', 'snowflake71', 'snowflake45', 'fireplace15', 'star95', 'ribbon89', ]
+var shuffled_names =  ['Thomas Percy', 'Xavier Cameron-Higgs', 'Kristina Stavri', 'Bence Bíró', 'Betti Szmutku', 'Anna Ferenczy', 'Nóra Kovács', 'Nándor Tóth', 'Eszter Lőrincz', 'Federica Piezzo', 'Bende Halasz', 'Kamilla Biró', 'Gergely Füstös', 'Anna Pálmai']
 
